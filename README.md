@@ -1,7 +1,7 @@
 Variational Reformulation of Bayesian Inverse Problems
 ================================================================
 
-**Panagiotis Tsilifis[^1], Ilias Bilionis[^2]<sup>,*</sup>, Ioannis Katsounaros[^3]<sup>,</sup>[^4]<sup>,</sup>[^5], Nicholas Zabaras[^6]**
+**Panagiotis Tsilifis<sup>1</sup>, Ilias Bilionis[2]<sup>,*</sup>, Ioannis Katsounaros[^3]<sup>,</sup>[^4]<sup>,</sup>[^5], Nicholas Zabaras[^6]**
 [^1]:
 <sup>1</sup>
 Department of Mathematics, University of Southern California, Los Angeles, CA 90089-2532, USA[^2]: 
