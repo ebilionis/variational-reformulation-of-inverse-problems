@@ -35,15 +35,41 @@ Prior to experimenting with our code, the following packages must be installed:
 + [Scipy](http://www.scipy.org/scipylib/index.html): Used for some statistical functions.
 + [Matplotlib](http://matplotlib.org): Used for plotting.
 
-The following are optional (used on in order to replicate the code that creates the Markov Chain Monte Carlo (MCMC) figures):
-+ [PyMCMC](https://github.com/ebilionis/py-mcmc): An MCMC package developed by the [PredictiveScience Lab](http://web.ics.purdue.edu/~ibilion/) of Prof. Bilionis, that implements the Metropolis-Adjusted-Langevin-Algorithm (MALA).
-+ [PyTables](http://www.pytables.org/moin) with [HDF5](http://www.hdfgroup.org/HDF5/) support enables.
+The following are optional:
++ [PyMCMC](https://github.com/ebilionis/py-mcmc): An MCMC package developed by the [PredictiveScience Lab](http://web.ics.purdue.edu/~ibilion/) of Prof. Bilionis, that implements the Metropolis-Adjusted-Langevin-Algorithm (MALA). It is used for the Markov Chain Monte Carlo (MCMC) figures):
++ [PyTables](http://www.pytables.org/moin) with [HDF5](http://www.hdfgroup.org/HDF5/) support: PyMCMC uses PyTables functionality to store the MCMC chains.
++ [FiPy](http://www.ctcms.nist.gov/fipy/): A finite volume library for Python. The solver for Example 2 of the paper was coded in FiPy.
+
+Installation
+------------
+Get the code from this site using git:
+
+	$ git clone https://github.com/ebilionis/variational-reformulation-of-inverse-problems.git
+	
+or by downloading a zipped version and extracting it as usual.
+Then you need to make sure that the environment variable `PYTHONPATH` contains the directory of the project. On Unix-like system (e.g., any Linux or OS X), you can just add the following line to your `.profile` file:
+
+	export PYTHONPATH=/path/to/variational-reformulation-of-inverse-problems:$PYTHONPATH
+
+No further actions are required.
+To test if the package works, invoke a Python shell and try:
+```python
+>>> import vuq
+```
+
+From now on we are referring to the directory at which you have unzipped the code with the variable `VUQ_DIR`.
+	
+Reproducing all the figures of the paper
+----------------------------------------
+
+
+
 
 Conventions
 -----------
 
 Here we outline some of the conventions that need to be followed when
-implemented new classes/functions or anything related to the `vuq`
+implementing new classes/functions or anything related to the `vuq`
 package.
 
 **Data.**
