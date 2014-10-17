@@ -1,0 +1,24 @@
+#!/bin/sh -l
+#PBS -V
+#PBS -q ibilion
+#PBS -l nodes=1:ppn=16
+#PBS -l walltime=10:00:00
+#PBS -N mcmc_catalysis
+
+# Setting up everything
+PROJECT_DIR=/home/ibilion/projects/catalysis-problem/code
+SCRIPT_DIR=$PROJECT_DIR/scripts
+PAPER_DIR=$PROJECT_DIR/paper
+
+# Model specific data
+MODEL_FILE=$PAPER_DIR/examples/catalysis_dimensionless_model.py
+
+cd $PAPER_DIR
+
+python \
+    $SCRIPT_DIR/do_mcmc.py \
+        --model=$MODEL_FILE \
+        --dt=.01 \
+        --num-sample=1000000 \
+        --num-burn=0 \
+        --num-thin=100

@@ -63,13 +63,32 @@ From now on we are referring to the directory at which you have unzipped the cod
 Reproducing all the figures of the paper
 ----------------------------------------
 
+The easiest way to reproduce the figures of the paper is to make sure you install all
+the required dependencies and have access to a PBS cluster.
+The cluster we used for our code is [Conte](https://www.rcac.purdue.edu/compute/conte/),
+a community cluster at [Purdue University](www.purdue.edu).
+
+In order to do this, you should follow this steps:
++ Change directories to `$VUQ_DIR/paper/examples`.
++ Run:
+```
+sh make_all.sh
+```.
++ Wait for all the jobs to complete.
++ Run `./make_catalysis_plots.sh` and `./make_diffusion_plots.sh`.
+
+#### Warning
+Because, the MCMC simulations take too long (a couple of days), we have commented them out.
+Feel free to edit [make_all.sh](paper/examples/make_all.sh) if you actually want to re-run them.
+If you do, you would have to delete the option `--skip-mcmc-output` from [make_catalysis_plots.sh](paper/examples/make_catalysis_plots.sh).
+
 ### Reaction Kinetic model
 
 Schematic representation of the reaction kinetic model:
 
 ![test](images/scheme_1.png)
 
-The experimental data we used were generated in Katsounaros (2012). You can download them from [here](paper/examples/catalysis_data.txt).
+The experimental data we used were generated in Katsounaros (2012). You can download them in text format from [here](paper/examples/catalysis_data.txt).
 
 #### Referenes
 - [Katsounaros, I., et al. (2012). "Reaction pathways in the electrochemical reduction of nitrate on tin." Electrochimica Acta 71: 270-276.](http://www.sciencedirect.com/science/article/pii/S0013468612005208)
