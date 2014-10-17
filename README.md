@@ -18,25 +18,42 @@ The classical approach to inverse problems is based on the optimization of a mis
 
 Submitted to: *Inverse Problems*
 
+What does this page contain?
+----------------------------
+
+This page contains the Python code we developed for this paper.
+The code implements the methodology of the paper.
+It can re-create all the figures of the paper.
+
+Dependencies
+------------
+The code is written in [Python](http://https://www.python.org).
+If your are not familiar with Python, we suggest that you go over a tutorial such as
+[this](https://docs.python.org/2/tutorial/index.html).
+Prior to experimenting with our code, the following packages must be installed:
++ [NumPy](http://www.numpy.org): Used for arrays, matrices, and linear algebra.
++ [Scipy](http://www.scipy.org/scipylib/index.html): Used for some statistical functions.
++ [Matplotlib](http://matplotlib.org): Used for plotting.
+
+The following are optional (used on in order to replicate the code that creates the Markov Chain Monte Carlo (MCMC) figures):
++ [PyMCMC](https://github.com/ebilionis/py-mcmc): An MCMC package developed by the [PredictiveScience Lab](http://web.ics.purdue.edu/~ibilion/) of Prof. Bilionis, that implements the Metropolis-Adjusted-Langevin-Algorithm (MALA).
++ [PyTables](http://www.pytables.org/moin) with [HDF5](http://www.hdfgroup.org/HDF5/) support enables.
+
 Conventions
 -----------
 
 Here we outline some of the conventions that need to be followed when
-implemented new classes/functions or anything related to the `vuq'
+implemented new classes/functions or anything related to the `vuq`
 package.
 
-Data
-++++
-
+**Data.**
 Data are always 2D arrays with the rows corresponding to distinct data
 points and the columns corresponding to the dimensionality of the each
 data point. So, remember:
 
     data <---> 2D array (num samples) x (num dimensions).
 
-Parameters
-++++++++++
-
+**Parameters.**
 Typically, the person that implements a particular PDF might want to
 assign to it parameters in an arbitrary way. However, for optimization
 purposes, all parameters should be 1D arrays. If the parameter being
@@ -45,8 +62,7 @@ be flattend in a `C`-style fashion. So, remember:
 
     parameter <---> 1D array (num dimensions), parameter.flatten()
 
-Jacobian of a multi-output function
-+++++++++++++++++++++++++++++++++++
+**Jacobian of a multi-output function**
 
 The Jacobian of a multivariate function is a 2D array with the number of
 rows corresponding to the comonent functions and the number of columns
@@ -61,9 +77,7 @@ So, remember:
 This means that when you have a single-output function you should return
 a single row matrix.
 
-Hessian of a multi-output function
-++++++++++++++++++++++++++++++++++
-
+**Hessian of a multi-output function.**
 The Hessian of a multi-output function should be 3D array. That is:
 
     H[i, j, k] = d2f[i] / dx[j]dx[k].
@@ -82,15 +96,10 @@ which can have a tremendous effect in reducing the memory requirement. The only
 place that this will have an effect in the existing code is
 vuq.Likelihood._eval(). I have marked the affected region with a TODO.
 
-Some things to keep in mind while dealing with the code
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+**Other things to keep in mind while dealing with the code.**
 These are some remarks about things that might lead to ugly bugs if we do not
 pay attention to them.
-
-Here we go:
-
-    + Our Gamma(a, b) and Pymc's Gamma(a', b') distribution differ. The
+- Our Gamma(a, b) and Pymc's Gamma(a', b') distribution differ. The
       correct way to get one from the other is this:
         
         a' = a, b' = 1 / b.
