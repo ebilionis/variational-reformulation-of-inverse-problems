@@ -1,22 +1,16 @@
 Variational Reformulation of Bayesian Inverse Problems
 ================================================================
 
-**Panagiotis Tsilifis<sup>1</sup>, Ilias Bilionis[2]<sup>,*</sup>, Ioannis Katsounaros[^3]<sup>,</sup>[^4]<sup>,</sup>[^5], Nicholas Zabaras[^6]**
-[^1]:
+**Panagiotis Tsilifis<sup>1</sup>, Ilias Bilionis<sup>2,*</sup>, Ioannis Katsounaros<sup>3,4,5</sup> Nicholas Zabaras<sup>6</sup>**
+
 <sup>1</sup>
-Department of Mathematics, University of Southern California, Los Angeles, CA 90089-2532, USA[^2]: 
-<sup>2</sup>
-School of Mechanical Engineering, Purdue University, 585 Purdue Mall, West Lafayette, IN 47906-2088, USA[^3]:
-<sup>3</sup>
-Department of Chemistry, University of Illinois at Urbana-Champaign, S. Mathews Ave., Urbana, IL 61801, USA[^4]:
-<sup>4</sup>
-Materials Science Division, Argonne National Laboratory, 9700 S. Cass Ave., Lemont, IL 60439, USA[^5]:
-<sup>5</sup>
-Leiden Institute of Chemistry, Leiden University, Einsteinweg 55, P.O. Box 9502, 2300 RA Leiden, The Netherlands[^6]:
-<sup>6</sup>
+Department of Mathematics, University of Southern California, Los Angeles, CA 90089-2532, USA<sup>2</sup>
+School of Mechanical Engineering, Purdue University, 585 Purdue Mall, West Lafayette, IN 47906-2088, USA<sup>3</sup>
+Department of Chemistry, University of Illinois at Urbana-Champaign, S. Mathews Ave., Urbana, IL 61801, USA<sup>4</sup>
+Materials Science Division, Argonne National Laboratory, 9700 S. Cass Ave., Lemont, IL 60439, USA<sup>5</sup>
+Leiden Institute of Chemistry, Leiden University, Einsteinweg 55, P.O. Box 9502, 2300 RA Leiden, The Netherlands<sup>6</sup>
 School of Engineering, University of Warwick, UK
 
-[^\*]:
 <sup>*</sup>
 Corresponding author.E-mail: {<tsilifis@usc.edu>, <ibilion@purdue.edu>, <katsounaros@anl.gov>, <nzabaras@gmail.com>}Abstract
 --------
