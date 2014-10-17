@@ -69,15 +69,15 @@ The cluster we used for our code is [Conte](https://www.rcac.purdue.edu/compute/
 a community cluster at [Purdue University](www.purdue.edu).
 
 In order to do this, you should follow this steps:
-+ Change directories to `$VUQ_DIR/paper/examples`.
++ Change directories to `$VUQ_DIR/paper/`.
 + Run: `sh make_all.sh`.
 + Wait for all the jobs to complete.
 + Run `./make_catalysis_plots.sh` and `./make_diffusion_plots.sh`.
 
 #### Warning
 Because, the MCMC simulations take too long (a couple of days), we have commented them out.
-Feel free to edit [make_all.sh](paper/examples/make_all.sh) if you actually want to re-run them.
-If you do, you would have to delete the option `--skip-mcmc-output` from [make_catalysis_plots.sh](paper/examples/make_catalysis_plots.sh).
+Feel free to edit [make_all.sh](paper/make_all.sh) if you actually want to re-run them.
+If you do, you would have to delete the option `--skip-mcmc-output` from [make_catalysis_plots.sh](paper/make_catalysis_plots.sh).
 
 ### Reaction Kinetic model
 
