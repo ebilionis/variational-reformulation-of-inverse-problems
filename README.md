@@ -12,8 +12,7 @@ Leiden Institute of Chemistry, Leiden University, Einsteinweg 55, P.O. Box 9502,
 School of Engineering, University of Warwick, UK
 
 <sup>*</sup>
-Corresponding author.E-mail: {<tsilifis@usc.edu>, <ibilion@purdue.edu>, <katsounaros@anl.gov>, <nzabaras@gmail.com>}Abstract
---------
+Corresponding author.E-mail: {<tsilifis@usc.edu>, <ibilion@purdue.edu>, <katsounaros@anl.gov>, <nzabaras@gmail.com>}#### Abstract
 The classical approach to inverse problems is based on the optimization of a misfit function. Despite its computational appeal, such an approach suffers from many shortcomings, e.g., non-uniqueness of solutions. The Bayesian formalism to inverse problems avoids most of the difficulties encountered by the optimization approach, albeit at an increased computational cost. In this work, we use information theoretic arguments in order to cast the Bayesian inference problem in terms of an optimization problem. The resulting scheme combines the theoretical soundness of fully Bayesian inference with the computational efficiency of a simple optimization.
 
 Submitted to: *Inverse Problems*
@@ -25,8 +24,11 @@ This page contains the Python code we developed for this paper.
 The code implements the methodology of the paper.
 It can re-create all the figures of the paper.
 
-Dependencies
+Installation
 ------------
+The instuctions in this page should guide you through the process of installing the necessary dependencies and actually using our code.
+
+### Dependencies
 The code is written in [Python](http://https://www.python.org).
 If your are not familiar with Python, we suggest that you go over a tutorial such as
 [this](https://docs.python.org/2/tutorial/index.html).
@@ -40,8 +42,7 @@ The following are optional:
 + [PyTables](http://www.pytables.org/moin) with [HDF5](http://www.hdfgroup.org/HDF5/) support: PyMCMC uses PyTables functionality to store the MCMC chains.
 + [FiPy](http://www.ctcms.nist.gov/fipy/): A finite volume library for Python. The solver for Example 2 of the paper was coded in FiPy.
 
-Installation
-------------
+### Using the code
 Get the code from this site using git:
 
 	$ git clone https://github.com/ebilionis/variational-reformulation-of-inverse-problems.git
@@ -62,7 +63,16 @@ From now on we are referring to the directory at which you have unzipped the cod
 Reproducing all the figures of the paper
 ----------------------------------------
 
+### Reaction Kinetic model
 
+Schematic representation of the reaction kinetic model:
+
+![test](images/scheme_1.png)
+
+The experimental data we used were generated in Katsounaros (2012). You can download them from [here](paper/examples/catalysis_data.txt).
+
+#### Referenes
+- [Katsounaros, I., et al. (2012). "Reaction pathways in the electrochemical reduction of nitrate on tin." Electrochimica Acta 71: 270-276.](http://www.sciencedirect.com/science/article/pii/S0013468612005208)
 
 
 Conventions
