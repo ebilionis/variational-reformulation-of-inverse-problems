@@ -70,10 +70,7 @@ a community cluster at [Purdue University](www.purdue.edu).
 
 In order to do this, you should follow this steps:
 + Change directories to `$VUQ_DIR/paper/examples`.
-+ Run:
-```
-sh make_all.sh
-```.
++ Run: `sh make_all.sh`.
 + Wait for all the jobs to complete.
 + Run `./make_catalysis_plots.sh` and `./make_diffusion_plots.sh`.
 
