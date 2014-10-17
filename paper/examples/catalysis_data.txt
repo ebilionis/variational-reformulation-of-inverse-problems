@@ -1,5 +1,5 @@
 # Experimental data for NO3- --> N2 + bi-products reaction.
-NO3-	NO2-	N2	NH3	N2O
+# NO3-	NO2-	N2	NH3	N2O
 500.00	0.00	0.00	0.00	0.00
 250.95	107.32	18.51	3.33	4.98
 123.66	132.33	74.85	7.34	20.14
