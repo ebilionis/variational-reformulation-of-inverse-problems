@@ -48,9 +48,11 @@ Get the code from this site using git:
 	$ git clone https://github.com/ebilionis/variational-reformulation-of-inverse-problems.git
 	
 or by downloading a zipped version and extracting it as usual.
-Then you need to make sure that the environment variable `PYTHONPATH` contains the directory of the project. On Unix-like system (e.g., any Linux or OS X), you can just add the following line to your `.profile` file:
+From now on we are referring to the directory at which you have unzipped the code with the variable `VUQ_DIR`.
 
-	export PYTHONPATH=/path/to/variational-reformulation-of-inverse-problems:$PYTHONPATH
+Now, you need to make sure that the environment variable `PYTHONPATH` contains the directory of the project. On Unix-like system (e.g., any Linux or OS X), you can just add the following line to your `.profile` file:
+
+	export PYTHONPATH=$VUQ_DIR:$VUQ_DIR/demos:$PYTHONPATH
 
 No further actions are required.
 To test if the package works, invoke a Python shell and try:
@@ -58,7 +60,7 @@ To test if the package works, invoke a Python shell and try:
 >>> import vuq
 ```
 
-From now on we are referring to the directory at which you have unzipped the code with the variable `VUQ_DIR`.
+
 	
 Reproducing all the figures of the paper
 ----------------------------------------
@@ -90,22 +92,37 @@ The experimental data we used were generated in Katsounaros (2012). You can down
 #### Referenes
 - [Katsounaros, I., et al. (2012). "Reaction pathways in the electrochemical reduction of nitrate on tin." Electrochimica Acta 71: 270-276.](http://www.sciencedirect.com/science/article/pii/S0013468612005208)
 
+### Contaminant Source Identification
 
-Conventions
+The data used for this example are synthetic. There are actually two versions of this problem:
++ The 4-sensor version whose data you can get from [here](paper/examples/diffusion_data_noise.npy).
++ The 2-sensor version whose data you can get from [here](paper/examples/diffusion_upperlowercenters_data_noise.npy).
+
+The data are in `*.npy` fromat. See [this](http://docs.scipy.org/doc/numpy/reference/routines.io.html) for more details on how to read them.
+
+The VUQ package
+---------------
+The `vuq` package implements the methodology of our paper. At the current version, it is
+to not to be considered as production code.
+However, it is try to keep it well-documented, so feel free to go throught the details.
+
+We will create a tutorial as soon as our paper is published.
+
+Code Conventions
 -----------
 
 Here we outline some of the conventions that need to be followed when
 implementing new classes/functions or anything related to the `vuq`
 package.
 
-**Data.**
+### Data
 Data are always 2D arrays with the rows corresponding to distinct data
 points and the columns corresponding to the dimensionality of the each
 data point. So, remember:
 
     data <---> 2D array (num samples) x (num dimensions).
 
-**Parameters.**
+### Parameters
 Typically, the person that implements a particular PDF might want to
 assign to it parameters in an arbitrary way. However, for optimization
 purposes, all parameters should be 1D arrays. If the parameter being
@@ -114,7 +131,7 @@ be flattend in a `C`-style fashion. So, remember:
 
     parameter <---> 1D array (num dimensions), parameter.flatten()
 
-**Jacobian of a multi-output function**
+### Jacobian of a multi-output function
 
 The Jacobian of a multivariate function is a 2D array with the number of
 rows corresponding to the comonent functions and the number of columns
@@ -129,7 +146,7 @@ So, remember:
 This means that when you have a single-output function you should return
 a single row matrix.
 
-**Hessian of a multi-output function.**
+### Hessian of a multi-output function
 The Hessian of a multi-output function should be 3D array. That is:
 
     H[i, j, k] = d2f[i] / dx[j]dx[k].
@@ -148,7 +165,7 @@ which can have a tremendous effect in reducing the memory requirement. The only
 place that this will have an effect in the existing code is
 vuq.Likelihood._eval(). I have marked the affected region with a TODO.
 
-**Other things to keep in mind while dealing with the code.**
+### Other things to keep in mind while dealing with the code
 These are some remarks about things that might lead to ugly bugs if we do not
 pay attention to them.
 - Our Gamma(a, b) and Pymc's Gamma(a', b') distribution differ. The
