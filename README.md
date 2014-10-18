@@ -4,15 +4,29 @@ Variational Reformulation of Bayesian Inverse Problems
 **Panagiotis Tsilifis<sup>1</sup>, Ilias Bilionis<sup>2,*</sup>, Ioannis Katsounaros<sup>3,4,5</sup> Nicholas Zabaras<sup>6</sup>**
 
 <sup>1</sup>
-Department of Mathematics, University of Southern California, Los Angeles, CA 90089-2532, USA<sup>2</sup>
-School of Mechanical Engineering, Purdue University, 585 Purdue Mall, West Lafayette, IN 47906-2088, USA<sup>3</sup>
-Department of Chemistry, University of Illinois at Urbana-Champaign, S. Mathews Ave., Urbana, IL 61801, USA<sup>4</sup>
-Materials Science Division, Argonne National Laboratory, 9700 S. Cass Ave., Lemont, IL 60439, USA<sup>5</sup>
-Leiden Institute of Chemistry, Leiden University, Einsteinweg 55, P.O. Box 9502, 2300 RA Leiden, The Netherlands<sup>6</sup>
-School of Engineering, University of Warwick, UK
+Department of Mathematics, University of Southern California, Los Angeles, CA 90089-2532, USA
+
+<sup>2</sup>
+School of Mechanical Engineering, Purdue University, 585 Purdue Mall, West Lafayette, IN 47906-2088, USA
+
+<sup>3</sup>
+Department of Chemistry, University of Illinois at Urbana-Champaign, S. Mathews Ave., Urbana, IL 61801, USA
+
+<sup>4</sup>
+Materials Science Division, Argonne National Laboratory, 9700 S. Cass Ave., Lemont, IL 60439, USA
+
+<sup>5</sup>
+Leiden Institute of Chemistry, Leiden University, Einsteinweg 55, P.O. Box 9502, 2300 RA Leiden, The Netherlands
+
+<sup>6</sup>
+Warwick Centre for Predictive Modelling, University of Warwick, Coventry, CV4 7 AL, UK
 
 <sup>*</sup>
-Corresponding author.E-mail: {<tsilifis@usc.edu>, <ibilion@purdue.edu>, <katsounaros@anl.gov>, <nzabaras@gmail.com>}#### Abstract
+Corresponding author.
+
+E-mail: {<tsilifis@usc.edu>, <ibilion@purdue.edu>, <katsounaros@anl.gov>, <nzabaras@gmail.com>}
+
+#### Abstract
 The classical approach to inverse problems is based on the optimization of a misfit function. Despite its computational appeal, such an approach suffers from many shortcomings, e.g., non-uniqueness of solutions. The Bayesian formalism to inverse problems avoids most of the difficulties encountered by the optimization approach, albeit at an increased computational cost. In this work, we use information theoretic arguments in order to cast the Bayesian inference problem in terms of an optimization problem. The resulting scheme combines the theoretical soundness of fully Bayesian inference with the computational efficiency of a simple optimization.
 
 Submitted to: *Inverse Problems*
