@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Variational Reformulation of Bayesian Inverse Problems
 ================================================================
 
